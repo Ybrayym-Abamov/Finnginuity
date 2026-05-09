@@ -6,6 +6,8 @@ The block below is intended to be pasted into the GitHub pull request descriptio
 
 ## PR description (copy from here through the end of this section)
 
+<!-- pr-body-start -->
+
 ### Summary
 
 Initial application scaffold for **Finnginuity** (Baking Steel): a **Next.js** storefront/marketing foundation with **Tailwind CSS**, **shadcn/ui**, and stubs for **Stripe** (payments) and **HubSpot** (CRM), ready for **Vercel** deployment.
@@ -49,6 +51,8 @@ npm run dev
 - Connect **Vercel** project, set env vars from `.env.example`, register Stripe webhook URL.
 - Add more shadcn primitives as needed (`npx shadcn@latest add …`).
 
+<!-- pr-body-end -->
+
 ---
 
 ## Detailed file map
@@ -72,3 +76,29 @@ npm run dev
 | `src/app/api/webhooks/stripe/route.ts` | Stripe webhook endpoint |
 | `.env.example` | Documented env vars |
 | `.nvmrc` | Node 22 for local/Vercel alignment |
+
+## GitHub CLI (`gh`) without Homebrew
+
+Homebrew may fail on older macOS/Xcode CLT. Install the official binary instead:
+
+```bash
+VER=2.92.0 ARCH=amd64  # use arm64 on Apple Silicon
+curl -fsSL -o /tmp/gh.zip "https://github.com/cli/cli/releases/download/v${VER}/gh_${VER}_macOS_${ARCH}.zip"
+unzip -o /tmp/gh.zip -d /tmp && mkdir -p ~/.local/bin && cp "/tmp/gh_${VER}_macOS_${ARCH}/bin/gh" ~/.local/bin/
+chmod +x ~/.local/bin/gh
+```
+
+Ensure `~/.local/bin` is on your `PATH` (e.g. `export PATH="$HOME/.local/bin:$PATH"` in `~/.zshrc`).
+
+**Authenticate once** (browser or token):
+
+```bash
+gh auth login
+# or: export GH_TOKEN=ghp_xxx   # classic PAT with repo scope
+```
+
+**Sync this PR’s description** from `docs/initial-setup.md` (markers `pr-body-start` / `pr-body-end`):
+
+```bash
+./scripts/update-pr-description.sh
+```
