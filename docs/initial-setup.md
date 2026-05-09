@@ -1,10 +1,12 @@
 # Finnginuity — initial setup reference
 
-The block below is intended to be pasted into the GitHub pull request description for `feature/InitialSetup`.
+Use this doc as the **technical source of truth** for the scaffold. The section between `pr-body-start` and `pr-body-end` can be pushed to GitHub as the description of the **currently checked-out branch’s open PR** via [`scripts/update-pr-description.sh`](../scripts/update-pr-description.sh), or copied manually into the PR UI.
 
 ---
 
 ## PR description (copy from here through the end of this section)
+
+<!-- pr-body-start -->
 
 ### Summary
 
@@ -49,6 +51,8 @@ npm run dev
 - Connect **Vercel** project, set env vars from `.env.example`, register Stripe webhook URL.
 - Add more shadcn primitives as needed (`npx shadcn@latest add …`).
 
+<!-- pr-body-end -->
+
 ---
 
 ## Detailed file map
@@ -72,3 +76,32 @@ npm run dev
 | `src/app/api/webhooks/stripe/route.ts` | Stripe webhook endpoint |
 | `.env.example` | Documented env vars |
 | `.nvmrc` | Node 22 for local/Vercel alignment |
+| `scripts/update-pr-description.sh` | Push PR body from markers in this doc via `gh` |
+
+## GitHub CLI (`gh`) without Homebrew
+
+Homebrew may fail on older macOS/Xcode CLT. Install the official binary instead:
+
+```bash
+VER=2.92.0 ARCH=amd64  # use arm64 on Apple Silicon
+curl -fsSL -o /tmp/gh.zip "https://github.com/cli/cli/releases/download/v${VER}/gh_${VER}_macOS_${ARCH}.zip"
+unzip -o /tmp/gh.zip -d /tmp && mkdir -p ~/.local/bin && cp "/tmp/gh_${VER}_macOS_${ARCH}/bin/gh" ~/.local/bin/
+chmod +x ~/.local/bin/gh
+```
+
+Ensure `~/.local/bin` is on your `PATH` (e.g. `export PATH="$HOME/.local/bin:$PATH"` in `~/.zshrc`).
+
+**Authenticate once** (browser or token):
+
+```bash
+gh auth login
+# or: export GH_TOKEN=ghp_xxx   # classic PAT with repo scope
+```
+
+**Sync the open PR for your current branch** (body extracted from the `pr-body` markers in this file):
+
+```bash
+./scripts/update-pr-description.sh
+```
+
+Requires [`gh`](https://cli.github.com/) authenticated (`gh auth login`). The script selects the PR whose **head** matches `git branch --show-current`.
