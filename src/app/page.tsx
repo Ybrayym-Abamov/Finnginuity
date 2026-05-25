@@ -324,7 +324,7 @@ export default function HomePage() {
             <ul className="space-y-2">
               <li>
                 <Link href="#shop" className="hover:text-foreground transition-colors">
-                  16" × 16" Baking Steel
+                  16&quot; × 16&quot; Baking Steel
                 </Link>
               </li>
               <li>
