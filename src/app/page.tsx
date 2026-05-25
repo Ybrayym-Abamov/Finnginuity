@@ -305,9 +305,74 @@ export default function HomePage() {
       </section>
 
       {/* ── Footer ─────────────────────────────────────────── */}
-      <footer className="border-t border-border py-8 text-center text-xs text-muted-foreground">
-        © {new Date().getFullYear()} Finnginuity. Stack: Next.js, Tailwind,
-        shadcn/ui — Stripe & HubSpot ready.
+      <footer className="border-t border-border bg-muted/30 px-6 py-14 text-sm text-muted-foreground">
+        <div className="mx-auto grid max-w-5xl gap-10 sm:grid-cols-3">
+          {/* Brand */}
+          <div>
+            <p className="mb-2 text-base font-semibold text-foreground">Finnginuity</p>
+            <p className="text-sm leading-relaxed">
+              Premium Baking Steel cookware for home cooks and professionals.
+              Engineered for heat. Built to last.
+            </p>
+          </div>
+
+          {/* Shop links */}
+          <div>
+            <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-foreground">
+              Shop
+            </p>
+            <ul className="space-y-2">
+              <li>
+                <Link href="#shop" className="hover:text-foreground transition-colors">
+                  16" × 16" Baking Steel
+                </Link>
+              </li>
+              <li>
+                <Link href="#shop" className="hover:text-foreground transition-colors">
+                  Custom Orders
+                </Link>
+              </li>
+              <li>
+                <Link href="#about" className="hover:text-foreground transition-colors">
+                  Why Baking Steel?
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Support links */}
+          <div>
+            <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-foreground">
+              Support
+            </p>
+            <ul className="space-y-2">
+              <li>
+                <Link href="#" className="hover:text-foreground transition-colors">
+                  Shipping & Returns
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="hover:text-foreground transition-colors">
+                  Care & Seasoning Guide
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="hover:text-foreground transition-colors">
+                  Contact Us
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="hover:text-foreground transition-colors">
+                  Privacy Policy
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="mx-auto mt-10 max-w-5xl border-t border-border pt-6 text-center text-xs">
+          © {new Date().getFullYear()} Finnginuity. All rights reserved.
+        </div>
       </footer>
     </main>
   );
