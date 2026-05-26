@@ -22,14 +22,14 @@ const STANDARD_PRODUCT = {
   weight: "16 lbs",
   thickness: '1/4"',
   description:
-    "The classic square. Holds heat like cast iron, conducts like steel — ideal for pizza, bread, and searing. Ships in 3–5 business days.",
+    "The classic square. Holds heat like cast iron, conducts like steel. Ideal for pizza, bread, and searing. Ships in 3–5 business days.",
   features: ["1/4″ A36 steel", "16 lbs", "Pre-seasoned", "Oven & grill safe"],
 };
 
 const THICKNESS_OPTIONS = [
-  { value: "0.25", label: '1/4" (Standard) — best for home ovens' },
-  { value: "0.375", label: '3/8" (Pro) — restaurant-grade heat retention' },
-  { value: "0.5", label: '1/2" (Ultra) — maximum thermal mass' },
+  { value: "0.25", label: '1/4" (Standard): best for home ovens' },
+  { value: "0.375", label: '3/8" (Pro): restaurant-grade heat retention' },
+  { value: "0.5", label: '1/2" (Ultra): maximum thermal mass' },
 ];
 
 type OrderConfirmation = {
@@ -49,7 +49,7 @@ export default function HomePage() {
   function handleStandardOrder() {
     setConfirmation({
       type: "standard",
-      details: `16" × 16" Baking Steel — $${STANDARD_PRODUCT.price}`,
+      details: `16" × 16" Baking Steel, $${STANDARD_PRODUCT.price}`,
     });
   }
 
@@ -71,7 +71,7 @@ export default function HomePage() {
 
     const label = THICKNESS_OPTIONS.find(
       (t) => t.value === customThickness,
-    )?.label.split(" —")[0];
+    )?.label.split(":")[0];
 
     setConfirmation({
       type: "custom",
@@ -105,7 +105,7 @@ export default function HomePage() {
             Serious heat. Serious crust.
           </h1>
           <p className="mx-auto mt-6 max-w-xl text-pretty text-lg text-muted-foreground">
-            Finnginuity brings pro-grade steel and tools to your kitchen —
+            Finnginuity brings pro-grade steel and tools to your kitchen,
             engineered for pizza, bread, and everything you want blistered and
             beautiful.
           </p>
@@ -182,7 +182,7 @@ export default function HomePage() {
               <h3 className="text-xl font-semibold">Build Your Steel</h3>
               <p className="mt-1 text-sm text-muted-foreground">
                 Choose your exact dimensions and thickness. We cut and season to
-                order — allow 2–3 weeks lead time.
+                order. Allow 2–3 weeks lead time.
               </p>
 
               <form onSubmit={handleCustomOrder} className="mt-6 flex flex-col gap-5">
@@ -247,7 +247,7 @@ export default function HomePage() {
             <div className="mt-8 flex items-center justify-between rounded-xl border border-green-200 bg-green-50 px-6 py-4 text-sm dark:border-green-800 dark:bg-green-950">
               <p className="text-green-800 dark:text-green-200">
                 <span className="font-semibold">Order received!</span>{" "}
-                {confirmation.details} —{" "}
+                {confirmation.details}.{" "}
                 {confirmation.type === "standard"
                   ? "We'll follow up with a payment link shortly."
                   : "We'll review your specs and send a quote within 24 hours."}
@@ -279,7 +279,7 @@ export default function HomePage() {
             {[
               {
                 title: "20× more conductive than stone",
-                body: "Steel transfers heat into your dough instantly — no more pale, soggy bottoms. Expect leopard-spotted crusts in under 5 minutes.",
+                body: "Steel transfers heat into your dough instantly. No more pale, soggy bottoms. Expect leopard-spotted crusts in under 5 minutes.",
               },
               {
                 title: "Lasts a lifetime",
