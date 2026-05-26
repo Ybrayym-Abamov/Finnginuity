@@ -14,6 +14,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { SocialSection } from "@/components/social-section";
 
 const STANDARD_PRODUCT = {
   name: '16" × 16" Baking Steel',
@@ -89,9 +90,6 @@ export default function HomePage() {
           <nav className="flex items-center gap-4 text-sm text-muted-foreground">
             <Link className="hover:text-foreground" href="#shop">
               Shop
-            </Link>
-            <Link className="hover:text-foreground" href="#about">
-              Baking Steel
             </Link>
           </nav>
         </div>
@@ -305,6 +303,7 @@ export default function HomePage() {
       </section>
 
       {/* ── Footer ─────────────────────────────────────────── */}
+      <SocialSection />
       <footer className="border-t border-border bg-muted/30 px-6 py-14 text-sm text-muted-foreground">
         <div className="mx-auto grid max-w-5xl gap-10 sm:grid-cols-3">
           {/* Brand */}
@@ -347,23 +346,23 @@ export default function HomePage() {
             </p>
             <ul className="space-y-2">
               <li>
-                <Link href="#" className="hover:text-foreground transition-colors">
-                  Shipping & Returns
+                <Link href="/faq#return-policy" className="hover:text-foreground transition-colors">
+                  Shipping &amp; Returns
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:text-foreground transition-colors">
-                  Care & Seasoning Guide
+                <Link href="/faq#seasoning" className="hover:text-foreground transition-colors">
+                  Care &amp; Seasoning Guide
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:text-foreground transition-colors">
+                <Link href="/faq" className="hover:text-foreground transition-colors">
+                  FAQ
+                </Link>
+              </li>
+              <li>
+                <Link href="/faq#contact" className="hover:text-foreground transition-colors">
                   Contact Us
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:text-foreground transition-colors">
-                  Privacy Policy
                 </Link>
               </li>
             </ul>
