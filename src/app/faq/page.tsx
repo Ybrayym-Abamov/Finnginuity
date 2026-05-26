@@ -20,7 +20,7 @@ const FAQS = [
     id: "return-policy",
     question: "What is your return policy?",
     answer:
-      "We stand behind every steel we make. If you're not completely satisfied, you can return any standard product within 30 days of delivery for a full refund — no questions asked. Custom orders are made to your exact specifications and are non-refundable, but we'll work with you if there's a defect or error on our end. To start a return, use the contact form below and we'll guide you through the process.",
+      "We stand behind every steel we make. If you're not completely satisfied, you can return any standard product within 30 days of delivery for a full refund. No questions asked. Custom orders are made to your exact specifications and are non-refundable, but we'll work with you if there's a defect or error on our end. To start a return, use the contact form below and we'll guide you through the process.",
   },
   {
     id: "seasoning",
@@ -32,13 +32,13 @@ const FAQS = [
     id: "made-in-usa",
     question: "Where is Finnginuity Baking Steel made?",
     answer:
-      "Proudly made in the USA. Every Baking Steel is cut, finished, and seasoned right here on American soil using domestically sourced A36 structural steel. We believe in supporting local craftspeople, keeping jobs in our community, and delivering a product built with the standards American manufacturing is known for. When you order from Finnginuity, you're not just getting a great product — you're investing in something made with pride.",
+      "Proudly made in the USA. Every Baking Steel is cut, finished, and seasoned right here on American soil using domestically sourced A36 structural steel. We believe in supporting local craftspeople, keeping jobs in our community, and delivering a product built with the standards American manufacturing is known for. When you order from Finnginuity, you're not just getting a great product. You're investing in something made with pride.",
   },
   {
     id: "free-shipping",
     question: "Do you offer free shipping?",
     answer:
-      "Yes! We offer free standard shipping on all orders over $75 within the contiguous United States. Standard delivery takes 5–7 business days. Need it faster? Expedited 2-day shipping is available at checkout for an additional fee. For custom orders, lead time is 2–3 weeks from order confirmation, after which your steel ships free (standard) or expedited at your option. We currently ship within the US only — international shipping is coming soon.",
+      "Yes! We offer free standard shipping on all orders over $75 within the contiguous United States. Standard delivery takes 5–7 business days. Need it faster? Expedited 2-day shipping is available at checkout for an additional fee. For custom orders, lead time is 2–3 weeks from order confirmation, after which your steel ships free (standard) or expedited at your option. We currently ship within the US only. International shipping is coming soon.",
   },
   {
     id: "custom-dimensions",
@@ -50,7 +50,7 @@ const FAQS = [
     id: "care",
     question: "How do I clean and maintain my Baking Steel?",
     answer:
-      "After use, let the steel cool completely, then scrape off any residue with a bench scraper or stiff brush. Wipe down with a damp cloth and dry immediately — never leave it wet or it can surface-rust. A tiny drop of oil rubbed in after cleaning keeps the seasoning fresh. Light surface rust is totally normal and easy to fix: scrub with steel wool, rinse, dry thoroughly, and apply a fresh thin layer of oil. Your steel is essentially indestructible with minimal care.",
+      "After use, let the steel cool completely, then scrape off any residue with a bench scraper or stiff brush. Wipe down with a damp cloth and dry immediately. Never leave it wet or it can surface-rust. A tiny drop of oil rubbed in after cleaning keeps the seasoning fresh. Light surface rust is totally normal and easy to fix: scrub with steel wool, rinse, dry thoroughly, and apply a fresh thin layer of oil. Your steel is essentially indestructible with minimal care.",
   },
 ];
 
@@ -136,7 +136,7 @@ export default function FAQPage() {
               Frequently Asked Questions
             </h1>
             <p className="mt-4 text-muted-foreground">
-              Everything you need to know about your Baking Steel — from care
+              Everything you need to know about your Baking Steel, from care
               and shipping to what makes ours different.
             </p>
           </div>

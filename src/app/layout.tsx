@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     template: "%s | Finnginuity",
   },
   description:
-    "Finnginuity — premium Baking Steel cookware and pizza tools for home and pro kitchens.",
+    "Finnginuity: premium Baking Steel cookware and pizza tools for home and pro kitchens.",
 };
 
 export default function RootLayout({
