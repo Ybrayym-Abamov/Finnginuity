@@ -225,7 +225,7 @@ export default function HomePage() {
                   table. No odd size is too odd.
                 </p>
                 <ul className="mt-5 space-y-2 text-sm text-stone-300">
-                  <li>✓ Any width or depth from 6" to 36"</li>
+                  <li>✓ Any width or depth from 6&quot; to 36&quot;</li>
                   <li>✓ Three thickness options</li>
                   <li>✓ Handles, hang holes, or clean edges</li>
                   <li>✓ Ships in 2 to 3 weeks</li>
