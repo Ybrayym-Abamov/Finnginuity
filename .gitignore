@@ -37,3 +37,6 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
+
+# local media/assets (photos, videos; too large for GitHub)
+/img/
