@@ -41,3 +41,10 @@ yarn-error.log*
 # local-only: over GitHub 50MB recommendation (see img/ on disk)
 /img/AQMDEu-QxSSb56BYqiGkx_SOl6UYKr4zgTyL3Ee7y8PfBJBrsyLyWx3AU8_WKQWVBiOYzxvZb6l7-JKmcIam3BoFgQ-yidOoZ0QAmXC8U9Uliiz2HC35-qu8V9_PF35rvS91TSKQwFSKfhCq9MZV2tKnmxwUR_kOisfw764.mp4
 /img/AQOF7arXwE6c2mVRrQXyllom9WIm7XupMjGuPyZG91cJ3IzwI3OwXzPbZSzRzxHNfsRkl-T6npdYzOkax6dZfvG3ER4NzzBQXjC9na523_zFC3K43atcK2GdAW9ytn2IPRlS3EyNlLdy-j6j7Gv68sST1BT5ommgsgrOsl4.mp4
+
+# Raw asset source folder (use public/images/ for web assets)
+img/
+
+# Large files
+*.mp4
+*.mov

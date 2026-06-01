@@ -14,6 +14,8 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { SocialSection } from "@/components/social-section";
+import { SiteHeader } from "@/components/site-header";
+import { SiteFooter } from "@/components/site-footer";
 
 const FAQS = [
   {
@@ -105,25 +107,7 @@ export default function FAQPage() {
 
   return (
     <div className="flex min-h-screen flex-col bg-background">
-      {/* ── Header ─────────────────────────────────────────── */}
-      <header className="sticky top-0 z-30 border-b border-border/80 bg-background/80 backdrop-blur">
-        <div className="mx-auto flex h-14 max-w-5xl items-center justify-between px-6">
-          <Link
-            href="/"
-            className="text-sm font-semibold tracking-tight hover:text-primary transition-colors"
-          >
-            Finnginuity
-          </Link>
-          <nav className="flex items-center gap-4 text-sm text-muted-foreground">
-            <Link
-              className="hover:text-foreground transition-colors"
-              href="/#shop"
-            >
-              Shop
-            </Link>
-          </nav>
-        </div>
-      </header>
+      <SiteHeader />
 
       <main className="flex-1">
         {/* ── Hero ───────────────────────────────────────────── */}
@@ -303,85 +287,7 @@ export default function FAQPage() {
         <SocialSection />
       </main>
 
-      {/* ── Footer ─────────────────────────────────────────── */}
-      <footer className="border-t border-border bg-muted/30 px-6 py-14 text-sm text-muted-foreground">
-        <div className="mx-auto grid max-w-5xl gap-10 sm:grid-cols-3">
-          <div>
-            <p className="mb-2 text-base font-semibold text-foreground">
-              Finnginuity
-            </p>
-            <p className="text-sm leading-relaxed">
-              Premium Baking Steel cookware for home cooks and professionals.
-              Engineered for heat. Built to last.
-            </p>
-          </div>
-          <div>
-            <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-foreground">
-              Shop
-            </p>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  href="/#shop"
-                  className="hover:text-foreground transition-colors"
-                >
-                  16&quot; × 16&quot; Baking Steel
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/#shop"
-                  className="hover:text-foreground transition-colors"
-                >
-                  Custom Orders
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-foreground">
-              Support
-            </p>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  href="/faq#return-policy"
-                  className="hover:text-foreground transition-colors"
-                >
-                  Shipping &amp; Returns
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/faq#seasoning"
-                  className="hover:text-foreground transition-colors"
-                >
-                  Care &amp; Seasoning Guide
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/faq"
-                  className="hover:text-foreground transition-colors"
-                >
-                  FAQ
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/faq#contact"
-                  className="hover:text-foreground transition-colors"
-                >
-                  Contact Us
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className="mx-auto mt-10 max-w-5xl border-t border-border pt-6 text-center text-xs">
-          © {new Date().getFullYear()} Finnginuity. All rights reserved.
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }
