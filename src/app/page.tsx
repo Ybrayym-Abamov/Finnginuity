@@ -28,7 +28,7 @@ const PRODUCTS = [
     image: "/images/square-counter.png",
     description:
       "The one that started it all. Fits most home ovens, holds heat like a dream, and gets better every time you cook on it.",
-    features: ['1/4" A36 steel', "16 lbs", "Pre-seasoned", "Oven & grill safe"],
+    features: ['1/4" A36 steel', "16 lbs", "Ready to season", "Oven & grill safe"],
   },
   {
     id: "round-16",
@@ -38,7 +38,7 @@ const PRODUCTS = [
     image: "/images/round-counter.png",
     description:
       "Built for pizza purists. The round shape follows your pie edge to edge and fits most oven racks perfectly.",
-    features: ['1/4" A36 steel', "Plasma cut", "Pre-seasoned", "Broiler safe"],
+    features: ['1/4" A36 steel', "Plasma cut", "Ready to season", "Broiler safe"],
   },
   {
     id: "handles-8x16",
@@ -48,7 +48,7 @@ const PRODUCTS = [
     image: "/images/handles-8x16.png",
     description:
       "The carry-anywhere steel. Cutout handles make it easy to move from oven to table to grill without burning yourself.",
-    features: ["Cutout handles", "Grill ready", "Pre-seasoned", "16 lbs"],
+    features: ["Cutout handles", "Grill ready", "Ready to season", "16 lbs"],
   },
   {
     id: "bread-4x16",
@@ -58,7 +58,7 @@ const PRODUCTS = [
     image: "/images/handles-4x16.png",
     description:
       "Narrow and long for sourdough loaves, baguettes, and focaccia. The handles mean no fumbling with oven mitts.",
-    features: ["Bread-optimized", "Cutout handles", "Pre-seasoned", "Oven safe"],
+    features: ["Bread-optimized", "Cutout handles", "Ready to season", "Oven safe"],
   },
 ];
 
@@ -120,9 +120,9 @@ export default function HomePage() {
               Serious heat. Serious crust.
             </h1>
             <p className="mt-5 max-w-lg text-pretty text-lg text-muted-foreground">
-              Every Finnginuity steel is cut, finished, and seasoned by hand
-              from A36 structural steel. The same material that builds
-              bridges, put to work in your kitchen.
+              Every Finnginuity steel is cut and finished by hand from A36
+              structural steel. The same material that builds bridges,
+              put to work in your kitchen.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild size="lg">
@@ -158,7 +158,7 @@ export default function HomePage() {
               The Collection
             </h2>
             <p className="mt-3 text-muted-foreground">
-              Ready to ship. Every piece pre-seasoned and finished by hand.
+              Ready to ship. Every piece cut and finished by hand, ready for you to season.
             </p>
           </div>
 
@@ -346,7 +346,7 @@ export default function HomePage() {
               Every Finnginuity steel starts as a full sheet of A36 structural
               grade steel. The same material used in bridges, buildings, and
               machinery. We cut it on a plasma table, finish every edge by
-              hand, season it, and ship it to you ready to use.
+              hand, and ship it to you ready to use.
             </p>
             <p className="mt-4 text-muted-foreground leading-relaxed">
               We are a small, woman-owned operation. Every order matters.
@@ -435,6 +435,86 @@ export default function HomePage() {
                 />
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Functional Art ─────────────────────────────────── */}
+      <section id="functional-art" className="border-b border-border px-6 py-20">
+        <div className="mx-auto max-w-6xl">
+          <div className="mb-12 text-center">
+            <p className="text-sm font-medium uppercase tracking-widest text-primary">
+              Beyond the kitchen
+            </p>
+            <h2 className="mt-2 text-3xl font-semibold tracking-tight">
+              Functional Art
+            </h2>
+            <p className="mt-3 max-w-xl mx-auto text-muted-foreground">
+              Not everything that comes out of this shop is a baking steel. When
+              the plasma table is running and there is material to work with, it
+              becomes something more. Pieces that live in your space, serve a
+              purpose, and carry the same handmade quality as everything else
+              here.
+            </p>
+          </div>
+
+          <div className="grid gap-8 lg:grid-cols-2">
+            {/* Featured piece */}
+            <div className="relative overflow-hidden rounded-2xl bg-stone-900 p-8 text-white">
+              <p className="text-xs font-semibold uppercase tracking-widest text-primary">
+                Current work
+              </p>
+              <h3 className="mt-3 text-2xl font-semibold">Wooden lamps.</h3>
+              <p className="mt-3 text-stone-300 leading-relaxed">
+                Hand-built wooden lamps, each one different. The kind of thing
+                you put in a corner and it quietly becomes the focal point of
+                the room. Made from natural wood, wired properly, finished to
+                last.
+              </p>
+              <ul className="mt-5 space-y-2 text-sm text-stone-300">
+                <li>✓ One-of-a-kind, no two are the same</li>
+                <li>✓ Natural wood, hand-finished</li>
+                <li>✓ Fully wired and ready to use</li>
+                <li>✓ Inquire for availability</li>
+              </ul>
+              <div className="mt-8">
+                <a
+                  href="/faq#contact"
+                  className="inline-flex items-center gap-1.5 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-sm transition-all hover:bg-primary/90"
+                >
+                  Ask about availability
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+
+            {/* What makes it art */}
+            <div className="flex flex-col gap-6">
+              {[
+                {
+                  heading: "Functional first",
+                  body: "Every piece has a job to do. A lamp that lights a room. A shelf that holds things. Art that does not just hang on a wall.",
+                },
+                {
+                  heading: "Made from what is available",
+                  body: "The same hands and tools that build baking steels build these. Nothing is outsourced. Nothing is mass-produced. If it comes from this shop, it was made here.",
+                },
+                {
+                  heading: "Limited and intentional",
+                  body: "These are not catalog items. When a piece is done, it is done. Reach out if something interests you. Custom requests are welcome.",
+                },
+              ].map((item) => (
+                <div
+                  key={item.heading}
+                  className="rounded-xl border border-border bg-background p-6 shadow-sm"
+                >
+                  <h3 className="font-semibold">{item.heading}</h3>
+                  <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+                    {item.body}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

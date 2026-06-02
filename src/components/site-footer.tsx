@@ -3,14 +3,15 @@ import Link from "next/link";
 export function SiteFooter() {
   return (
     <footer className="border-t border-border bg-muted/30 px-6 py-14 text-sm text-muted-foreground">
-      <div className="mx-auto grid max-w-6xl gap-10 sm:grid-cols-3">
-        <div>
+      <div className="mx-auto grid max-w-6xl gap-10 sm:grid-cols-4">
+        <div className="sm:col-span-1">
           <p className="mb-2 text-base font-semibold text-foreground">
             Finnginuity LLC
           </p>
           <p className="text-sm leading-relaxed">
-            Handmade steel cookware from northern Minnesota. Built from the same
-            raw material the Iron Range has produced for over a century.
+            Handmade steel cookware and functional art from northern Minnesota.
+            Built from the same raw material the Iron Range has produced for
+            over a century.
           </p>
         </div>
         <div>
@@ -36,6 +37,23 @@ export function SiteFooter() {
             <li>
               <Link href="/#shop" className="hover:text-foreground transition-colors">
                 Custom Orders
+              </Link>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-foreground">
+            Functional Art
+          </p>
+          <ul className="space-y-2">
+            <li>
+              <Link href="/#functional-art" className="hover:text-foreground transition-colors">
+                Wooden Lamps
+              </Link>
+            </li>
+            <li>
+              <Link href="/faq#contact" className="hover:text-foreground transition-colors">
+                Request a Piece
               </Link>
             </li>
           </ul>

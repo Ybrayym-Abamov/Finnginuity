@@ -27,13 +27,13 @@ const FAQS = [
     id: "seasoning",
     question: "Do I need to season my Baking Steel?",
     answer:
-      "All Finnginuity Baking Steels ship pre-seasoned with a thin layer of food-safe oil, so you can use it right out of the box. Over time, cooking naturally builds up a better seasoning layer. If you ever need to re-season: dry the steel completely, rub a very thin coat of flaxseed or vegetable oil across the surface, and bake it upside down at 450–500 °F for one hour. Repeat 2–3 times for a bulletproof finish. Avoid soaking in water and never put it in the dishwasher.",
+      "Yes, and it's straightforward. Your steel ships clean and finished but not pre-seasoned. Seasoning it yourself is actually better because you control it. Before your first use, dry the steel completely, rub a very thin coat of flaxseed or vegetable oil across the surface, and bake it upside down at 450-500 F for one hour. Let it cool in the oven, then repeat 2-3 times for a solid base layer. After that, regular cooking does the rest. Avoid soaking in water and never put it in the dishwasher.",
   },
   {
     id: "made-in-usa",
     question: "Where is Finnginuity Baking Steel made?",
     answer:
-      "Proudly made in the USA. Every Baking Steel is cut, finished, and seasoned right here on American soil using domestically sourced A36 structural steel. We believe in supporting local craftspeople, keeping jobs in our community, and delivering a product built with the standards American manufacturing is known for. When you order from Finnginuity, you're not just getting a great product. You're investing in something made with pride.",
+      "Proudly made in the USA. Every Baking Steel is cut and finished right here on American soil using domestically sourced A36 structural steel. We believe in supporting local craftspeople, keeping jobs in our community, and delivering a product built with the standards American manufacturing is known for. When you order from Finnginuity, you're not just getting a great product. You're investing in something made with pride.",
   },
   {
     id: "free-shipping",
@@ -155,8 +155,8 @@ export default function FAQPage() {
               Proudly Made in America
             </h2>
             <p className="mt-3 max-w-xl mx-auto text-stone-300">
-              Every Finnginuity Baking Steel is cut, finished, and seasoned in
-              the USA using domestically sourced A36 steel. Built by American
+              Every Finnginuity Baking Steel is cut and finished in the
+              USA using domestically sourced A36 steel. Built by American
               hands, built to last a lifetime.
             </p>
           </div>
