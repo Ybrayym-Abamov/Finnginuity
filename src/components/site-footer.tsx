@@ -83,6 +83,14 @@ export function SiteFooter() {
                 Contact Us
               </Link>
             </li>
+            <li>
+              <a
+                href="mailto:info@finnginuity.com"
+                className="hover:text-foreground transition-colors"
+              >
+                info@finnginuity.com
+              </a>
+            </li>
           </ul>
         </div>
       </div>

@@ -62,7 +62,7 @@ type FormState = {
   message: string;
 };
 
-type SubmitStatus = "idle" | "success";
+type SubmitStatus = "idle" | "submitting" | "success" | "error";
 
 export default function FAQPage() {
   const [form, setForm] = useState<FormState>({
@@ -73,6 +73,7 @@ export default function FAQPage() {
   });
   const [status, setStatus] = useState<SubmitStatus>("idle");
   const [errors, setErrors] = useState<Partial<FormState>>({});
+  const [serverError, setServerError] = useState("");
 
   function validate(): boolean {
     const newErrors: Partial<FormState> = {};
@@ -97,11 +98,29 @@ export default function FAQPage() {
     }
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (!validate()) return;
-    setStatus("success");
-    setForm({ name: "", email: "", phone: "", message: "" });
+    setStatus("submitting");
+    setServerError("");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) {
+        const data = await res.json();
+        setServerError(data.error ?? "Something went wrong. Please try again.");
+        setStatus("error");
+        return;
+      }
+      setStatus("success");
+      setForm({ name: "", email: "", phone: "", message: "" });
+    } catch {
+      setServerError("Something went wrong. Please try again.");
+      setStatus("error");
+    }
   }
 
   return (
@@ -174,7 +193,15 @@ export default function FAQPage() {
               </h2>
               <p className="mt-3 text-muted-foreground">
                 Can&apos;t find what you&apos;re looking for? Send us a message
-                and we&apos;ll get back to you within one business day.
+                and we&apos;ll get back to you within one business day. You can
+                also reach us directly at{" "}
+                <a
+                  href="mailto:info@finnginuity.com"
+                  className="text-primary hover:underline"
+                >
+                  info@finnginuity.com
+                </a>
+                .
               </p>
             </div>
 
@@ -273,9 +300,12 @@ export default function FAQPage() {
                     )}
                   </div>
 
-                  <Button type="submit" size="lg" className="w-full sm:w-auto">
-                    Send Message
+                  <Button type="submit" size="lg" className="w-full sm:w-auto" disabled={status === "submitting"}>
+                    {status === "submitting" ? "Sending…" : "Send Message"}
                   </Button>
+                  {status === "error" && (
+                    <p className="text-sm text-destructive">{serverError}</p>
+                  )}
                 </form>
               )}
             </div>
